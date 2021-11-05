@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newton Dashboard Student</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+  <link rel="stylesheet" href="materialize.min.css">
+  <script src="materialize.min.js"></script>
+  <style>
+    .img-logo {
+      width: 95%;
+      padding: 10px;
+      display: block;
+    }
+
+    .master__main {
+      padding-left: 270px;
+      position: relative;
+    }
+
+    .master__main-inner {
+      padding: 0 20px;
+    }
+
+    .profile {
+      background: #f7f8fc;
+      padding: 1px;
+      text-align: center;
+    }
+
+    .circle-rw {
+      background: #bdbdbd;
+      color: #fff;
+      width: 110px !important;
+      height: 110px !important;
+      font-size: 54px;
+      margin-bottom: 10px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .circle-rw span {
+      font-size: 80px;
+      line-height: 7rem;
+    }
+
+    .img-zoom {
+      width: 150px;
+      margin: 10px auto;
+      display: block;
+    }
+
+    .sidenav>li>a.active {
+      box-shadow: 5px 0px 0px 0px inset #316633;
+    }
+
+    .fs-1{
+      font-size: .735rem !important;
+    }
+
+    .fs-2{
+      font-size: 0.875rem !important;
+    }
+
+    .m-0{
+      margin: 0 !important;
+    }
+
+    .mt-1 {
+      margin-top: 10px;
+    }
+
+    .mt-2 {
+      margin-top: 20px;
+    }
+
+    .mt-3 {
+      margin-top: 30px;
+    }
+
+    .mt-4 {
+      margin-top: 40px;
+    }
+
+    .mt-5 {
+      margin-top: 50px;
+    }
+
+    .fw-bold {
+      font-weight: 500;
+    }
+
+    .btn-outline-success {
+      border: 1px solid #316633;
+      border-radius: 4px;
+      font-weight: 500;
+      font-size: 13px;
+    }
+
+    .table-bordered {
+    border: 1px solid #dee2e6;
+}
+
+.table-bordered thead td, .table-bordered thead th {
+    border-bottom-width: 2px;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.table-bordered td, .table-bordered th {
+    border: 1px solid #dee2e6;
+}
+.active-header{
+  background : #316633;
+  color: #fff;
+}
+.cell-timetable{
+  border-left-width: 3px;
+  border-left-color: #ddd;
+  border-left-style: solid;
+  padding-left: 8px;
+  transform: translateX(-5px)
+}
+.cell-timetable + .cell-timetable{
+  margin-bottom: 10px;
+}
+
+    @media only screen and (max-width: 992px) {
+      .master__main {
+        padding-left: 0px;
+      }
+    }
+  </style>
+</head>
+
+<body class='bg-white-1'>
+  <aside class='bg-white'>
+
+    <ul id="slide-out" class="sidenav sidenav-fixed">
+      <div class='line__bottom'>
+        <img class="img-logo" src="logo.png" alt="">
+      </div>
+      <div class="divider"></div>
+
+      <div class="user-view profile">
+        <div class="circle center-block circle-rw">
+          <span class="material-icons">
+            person
+          </span>
+        </div>
+        <!-- div class='circle center-block circle-rw '>
+          <img src="./2011301.jpg"  alt="" style='width:100%;transform: translateY(-20px)'>          
+        </div -->
+
+        <div>
+          <span>Joaquín, Velasquez Castagnola</span>
+        </div>
+        <b>L3D JAGUARS</b>
+      </div>
+      <div class="divider"></div>
+
+      <li><a href="#!" class='active'><span class="mdi-icons material-icons">search</span>Search Student</a></li>
+      <li><a href="#!"><span class="mdi-icons material-icons">event</span>Timetable</a></li>
+      <li><a href="#!"><span class="mdi-icons material-icons">emoji_events</span>Extracurriculares</a></li>
+      <li><a href="#!"><span class="mdi-icons material-icons-outlined">menu_book</span>Agenda</a></li>
+      <li><a href="#!"><span class="mdi-icons material-icons-outlined">email</span>Gmail</a></li>
+      <li><a href="#!"><span class="mdi-icons material-icons-outlined">folder</span>Drive Class Folder</a></li>
+      <div class="divider"></div>
+      <a href="">
+        <img class="img-zoom" src="./zoom.png" alt="">
+      </a>
+      <div class="divider"></div>
+
+      <li> <a href="#"> <span class="mdi-icons material-icons">logout</span> Cerrar Sesión</a></li>
+      <div style='padding-bottom: 20px;'></div>
+
+    </ul>
+  </aside>
+  <div class="navbar-fixed">
+    <nav class='master__main'>
+      <div class="nav-wrapper">
+        <div class='left'>
+          <a href="#" data-target="slide-out" class=" show-on-medium-and-down sidenav-trigger" style='display:none;'>
+            <i class="material-icons">menubar</i>
+          </a>
+
+        </div>
+        <div href="#!" class="brand-logo">
+          <span>Search Student</span>
+        </div>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#"><i class="material-icons">notifications</i></a></li>
+        </ul>
+
+
+      </div>
+    </nav>
+  </div>
+  <section class='master__main'>
+
+    <section class='master__main-inner'>
+      <!--  contanido -->
+      <form action="#" class='mt-3'>
+        <div class="input-field">
+          <input type="text" id="autocomplete-input" class="autocomplete">
+          <label for="autocomplete-input">Ingresar Nombre de estudiante  *</label>
+        </div>
+        <div>
+          <input type="submit" value="Buscar alumno" class='btn btn-success fw-bold' />
+        </div>
+      </form>
+      <table class='table'>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Aula</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Alec, Busch Castañeda</td>
+            <td>T1A BUNNIES</td>
+            <td><a href="#" class='btn-flat btn-outline-success'>USAR CUENTA</a></td>
+          </tr>
+        </tbody>
+
+      </table>
+      <br>
+      <br>
+      <br>
+      <table class="bg-white table table-bordered">
+        <thead>
+          <th></th>
+          <th class="center-align fs-2">Mon 01/11</th>
+          <th class="center-align fs-2">Tue 02/11</th>
+          <th class="center-align fs-2 active-header">Wed 03/11</th>
+          <th class="center-align fs-2">Thu 04/11</th>
+          <th class="center-align fs-2">Fri 05/11</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td class='fs-2'>07:45</td>
+            <td>
+              <div class='cell-timetable'>
+                <p class="m-0 fs-1">PHYSICAL EDUCATION (PEDRO PEREZ)</p>
+                <a class="fs-2" href="#">Live class </a>
+                <p class="m-0 fs-2"> <b> Zoom id: </b> 824 4460 9411</p>
+
+              </div>
+            </td>
+            <td>
+              <p class="m-0 fs-1">INDIVIDUALS AND SOCIETIES EXTENSION - INSO Form I Presential AB (TIMOTHY SWAN</p>
+              <a class="fs-2" href="#">Live class </a>
+              <p class="m-0 fs-2">Zoom id: 834 947 2544</p>
+            </td>
+            <td>
+              <p class="m-0 fs-1">INDIVIDUALS AND SOCIETIES EXTENSION - INSO Form I Presential AB (TIMOTHY SWAN</p>
+              <a class="fs-2" href="#">Live class </a>
+              <p class="m-0 fs-2">Zoom id: 834 947 2544</p>
+            </td>
+            <td>
+              <p class="m-0 fs-1">INDIVIDUALS AND SOCIETIES EXTENSION - INSO Form I Presential AB (TIMOTHY SWAN</p>
+              <a class="fs-2" href="#">Live class </a>
+              <p class="m-0 fs-2">Zoom id: 834 947 2544</p>
+            </td>
+            <td>
+              <p class="m-0 fs-1">INDIVIDUALS AND SOCIETIES EXTENSION - INSO Form I Presential AB (TIMOTHY SWAN</p>
+              <a class="fs-2" href="#">Live class </a>
+              <p class="m-0 fs-2">Zoom id: 834 947 2544</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!--  end contanido -->
+
+
+
+    </section>
+  </section>
+
+
+  <div class="fixed-action-btn">
+    <a class="btn-floating  bg-newton" href='mailto:christian.benavides@newton.edu.pe'>
+      <i class=" material-icons">support_agent</i>
+      Soporte
+    </a>
+
+  </div>
+
+  <script>
+    var options = {};
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.modal');
+      var instances = M.Modal.init(elems, options);
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.sidenav');
+      var instances = M.Sidenav.init(elems, options);
+    });
+  </script>
+
+</body>
+
+</html>
